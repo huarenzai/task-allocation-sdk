@@ -1,0 +1,139 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=25404, tid=22800
+#
+# JRE version:  (7.0_79-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003580800):  JavaThread "Unknown thread" [_thread_in_vm, id=22800, stack(0x0000000003400000,0x0000000003500000)]
+
+Stack: [0x0000000003400000,0x0000000003500000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000003580800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=22800, stack(0x0000000003400000,0x0000000003500000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 38400K, used 665K [0x00000007d5d00000, 0x00000007d8780000, 0x0000000800000000)
+  eden space 33280K, 2% used [0x00000007d5d00000,0x00000007d5da66b8,0x00000007d7d80000)
+  from space 5120K, 0% used [0x00000007d8280000,0x00000007d8280000,0x00000007d8780000)
+  to   space 5120K, 0% used [0x00000007d7d80000,0x00000007d7d80000,0x00000007d8280000)
+ ParOldGen       total 86016K, used 0K [0x0000000781800000, 0x0000000786c00000, 0x00000007d5d00000)
+  object space 86016K, 0% used [0x0000000781800000,0x0000000781800000,0x0000000786c00000)
+ PSPermGen       total 21504K, used 697K [0x000000077c600000, 0x000000077db00000, 0x0000000781800000)
+  object space 21504K, 3% used [0x000000077c600000,0x000000077c6ae588,0x000000077db00000)
+
+Card table byte_map: [0x0000000006680000,0x0000000006aa0000] byte_map_base: 0x0000000002a9d000
+
+Polling page: 0x0000000001340000
+
+Code Cache  [0x0000000003680000, 0x00000000038f0000, 0x0000000006680000)
+ total_blobs=38 nmethods=0 adapters=20 free_code_cache=48889Kb largest_free_block=50062528
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.017 loading class 0x00000000035c54a0
+Event: 0.017 loading class 0x00000000035c54a0 done
+Event: 0.017 loading class 0x00000000035c54f0
+Event: 0.017 loading class 0x00000000035c54f0 done
+Event: 0.017 loading class 0x00000000035c5540
+Event: 0.017 loading class 0x00000000035c5540 done
+Event: 0.018 loading class 0x00000000035c62c0
+Event: 0.018 loading class 0x00000000035c62c0 done
+Event: 0.018 loading class 0x00000000035c5ee0
+Event: 0.018 loading class 0x00000000035c5ee0 done
+
+
+Dynamic libraries:
+0x00007ff64df50000 - 0x00007ff64df83000 	D:\soft\jdk\jdk7\bin\java.exe
+0x00007ffbf9090000 - 0x00007ffbf9251000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffbf6ca0000 - 0x00007ffbf6d4d000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffbf61c0000 - 0x00007ffbf63a8000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffbf66a0000 - 0x00007ffbf6747000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffbf65f0000 - 0x00007ffbf668d000 	C:\Windows\system32\msvcrt.dll
+0x00007ffbf7040000 - 0x00007ffbf709b000 	C:\Windows\system32\sechost.dll
+0x00007ffbf6910000 - 0x00007ffbf6a2c000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffbf6a90000 - 0x00007ffbf6be6000 	C:\Windows\system32\USER32.dll
+0x00007ffbf8920000 - 0x00007ffbf8aa7000 	C:\Windows\system32\GDI32.dll
+0x00007ffbe9ae0000 - 0x00007ffbe9d54000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.839_none_a2ddba30a539a2ae\COMCTL32.dll
+0x00007ffbf6dc0000 - 0x00007ffbf703e000 	C:\Windows\system32\combase.dll
+0x00007ffbf6150000 - 0x00007ffbf61ba000 	C:\Windows\system32\bcryptPrimitives.dll
+0x00007ffbf64a0000 - 0x00007ffbf64db000 	C:\Windows\system32\IMM32.DLL
+0x000000006d3a0000 - 0x000000006d472000 	D:\soft\jdk\jdk7\jre\bin\msvcr100.dll
+0x000000006b990000 - 0x000000006c165000 	D:\soft\jdk\jdk7\jre\bin\server\jvm.dll
+0x00007ffbf6690000 - 0x00007ffbf6698000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffbf3e20000 - 0x00007ffbf3e29000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffbf3de0000 - 0x00007ffbf3e03000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffbf6d50000 - 0x00007ffbf6dbb000 	C:\Windows\system32\WS2_32.dll
+0x0000000001830000 - 0x000000000185c000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffbf5f30000 - 0x00007ffbf5f73000 	C:\Windows\system32\cfgmgr32.dll
+0x000000006d390000 - 0x000000006d39f000 	D:\soft\jdk\jdk7\jre\bin\verify.dll
+0x000000006cc50000 - 0x000000006cc78000 	D:\soft\jdk\jdk7\jre\bin\java.dll
+0x000000006cbf0000 - 0x000000006cc05000 	D:\soft\jdk\jdk7\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=D:\project\task-allocation-sdk -Dmaven.home=D:\soft\maven -Dclassworlds.conf=D:\soft\maven\bin\m2.conf -Didea.launcher.port=57294 -Didea.launcher.bin.path=D:\Program Files\JetBrains\IntelliJ IDEA 2017.1.4\bin -Dfile.encoding=UTF-8 
+java_command: com.intellij.rt.execution.application.AppMainV2 org.codehaus.classworlds.Launcher -Didea.version=2017.1.4 -s D:\soft\maven\conf\settings.xml clean
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\soft\jdk\jdk7
+CLASSPATH=.;D:\soft\jdk\jdk7\lib\dt.jar;D:\soft\jdk\jdk7\lib\tools.jar;
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\soft\jdk\jdk7\bin;D:\soft\jdk\jdk7\jre\bin;D:\soft\maven\bin;D:\soft\Git\cmd;D:\soft\sqlite
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, erms, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 8289204k(1207240k free), swap 14320048k(5740k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Wed Aug 16 11:30:32 2017
+elapsed time: 0 seconds
+

@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gic</groupId>
+  <artifactId>task-allocation-sdk</artifactId>
+  <packaging>jar</packaging>
+  <version>0.5</version>
+  <name>task-allocation Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <!--<repositories>-->
+
+    <!--&lt;!&ndash; 如有Nexus私服, 取消注释并指向正确的服务器地址 &ndash;&gt;-->
+    <!--<repository>-->
+      <!--<id>nexus-repos</id>-->
+      <!--<name>Team Nexus Repository</name>-->
+      <!--<url>http://182.254.134.223:8081/nexus/content/groups/public/</url>-->
+    <!--</repository>-->
+
+    <!--<repository>-->
+      <!--<id>central-repos</id>-->
+      <!--<name>Central Repository</name>-->
+      <!--<url>http://repo.maven.apache.org/maven2</url>-->
+    <!--</repository>-->
+
+    <!--<repository>-->
+      <!--<id>central-repos2</id>-->
+      <!--<name>Central Repository 2</name>-->
+      <!--<url>http://repo1.maven.org/maven2/</url>-->
+    <!--</repository>-->
+  <!--</repositories>-->
+
+  <distributionManagement>
+      <repository>
+        <!-- 和 Maven setting 保持一致 -->
+        <id>nexus-snapshots</id>
+        <name>nexus distribution snapshot repository</name>
+        <!-- 这里使用 /content/repositories/snapshots/ -->
+        <url>http://182.254.134.223:8081/nexus/content/repositories/snapshots/</url>
+        <!--<url>http://stream.banli.mobi:8081/content/repositories/snapshots/</url>-->
+      </repository>
+    </distributionManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.dexcoder</groupId>
+      <artifactId>dexcoder-dal-spring</artifactId>
+      <version>2.3.5</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>dubbo</artifactId>
+      <version>2.8.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>3.4.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.sgroschupf</groupId>
+      <artifactId>zkclient</artifactId>
+      <version>0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.gic</groupId>
+      <artifactId>gic-mq-sdk</artifactId>
+      <version>LATEST</version>
+    </dependency>
+    <dependency>
+      <groupId>com.whalin</groupId>
+      <artifactId>Memcached-Java-Client</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+  </dependencies>
+  <!--<build>-->
+    <!--<finalName>task-allocation-sdk</finalName>-->
+  <!--</build>-->
+  <build>
+    <finalName>task-allocation-sdk</finalName>
+    <plugins>
+          <plugin>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>2.7</version>
+            <executions>
+              <execution>
+                <id>default-deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+  </build>
+</project>
